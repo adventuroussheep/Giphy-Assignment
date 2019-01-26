@@ -1,0 +1,79 @@
+#wrapper{
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 5% auto 5%;
+    background: url(../images/background.jpeg);
+    background-size: cover;
+    grid-gap: 1em;
+}
+
+#header{
+    grid-area: 1/1/1/4;
+    margin-top: 10px;
+    margin-left: 5px;
+    margin-right:5px;
+    border: 3px solid #787813;
+    font-size: 20px;
+    text-align: center;
+    font-size: 50px;
+    padding: 5px;
+    background-color: rgba(255, 255, 174, 0.7);
+}
+
+#body{
+    grid-area: 2/2/2/3;
+    border: 3px solid #787813;
+    background-color: rgba(255, 255, 174, 0.7);
+    display:grid;
+    grid-template-rows: auto auto auto;
+    grid-template-columns: 5% auto 5%;
+}
+
+p {
+    font-size: 18px;
+}
+
+#subheader {
+    grid-area: 1/2/1/2;
+    border-bottom: 2px solid black;
+    text-align: center;
+    font-size: 18px;
+}
+
+#buttonDiv {
+    grid-area: 2/2/2/2;
+    text-align: center;
+    border-bottom: 2px solid black;
+    padding: 6px;
+}
+
+.buttonClass {
+    background-color: #DCDC70;
+    border-color: #787813;
+    border-radius: 20px;
+    font-size: 14px;
+    padding: 3px;
+    margin-left: 8px;
+    margin-top: 4px;
+}
+
+.buttonClass:hover {
+    box-shadow: 4px 5px black;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+#gifDiv {
+    text-align: center;
+    grid-area: 3/2/3/2;
+    text-align: center;
+    padding: 5px;
+}
+
+.newDivs {
+    background-color: rgba(255, 255, 174, 0.7);
+    display: inline-block;
+    padding: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 2px solid #787813;
+}

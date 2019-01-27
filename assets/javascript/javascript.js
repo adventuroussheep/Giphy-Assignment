@@ -8,7 +8,7 @@ buttonArray = [
   "Rhinoceros"
 ];
 
-hasSearched = false;
+var hasSearched = false;
 
 $(document).ready(function() {
   buttonGenerator();
@@ -30,6 +30,7 @@ $(document).ready(function() {
       $("#searchBtn").click();
     }
   });
+
 
   // Searches api when a button is clicked
   $(document).on("click", ".buttonClass", function() {
@@ -54,6 +55,7 @@ $(document).ready(function() {
     }).then(function(response) {
       console.log(response);
       for (var i = 0; i < 10; i++) {
+
         // grabs still and gif image urls
 
         stillImageUrl = response.data[i].images.fixed_height_still.url;
@@ -74,11 +76,8 @@ $(document).ready(function() {
         var createdDiv = $("<div>");
         createdDiv.attr("id", "divId" + [i]);
 
-        var favBtn = $("<button>");
-
-        favBtn.text("☆");
-
         $("#gifDiv").append(createdDiv);
+
 
         // Sets attributes to the created items
         createdDiv.attr("class", "newDivs");
@@ -91,12 +90,8 @@ $(document).ready(function() {
         createdImg.attr("data-rating", ratingUppercase);
 
         $("#divId" + [i]).append(createdImg);
-        $("#divId" + [i]).append(createdRatings);
+        $("#divId" + [i]).append(createdRatings);    
 
-        // $("#gifDiv").append(createdImg);
-        // $("#gifDiv").append(createdRatings);
-
-       
 
         // Play/pause function for Gifs
         $(".imgClass" + [i]).on("click", function() {
